@@ -81,7 +81,12 @@ export class QuizQuestionsComponent {
     this.router.navigate(['/quiz-result'])
   }
 
+  changeFormat(format:string){
+    var questionFormat = document.createElement('textarea');
+    questionFormat.innerHTML = format;
+    return questionFormat.value;
 
+  }
 }
 
 

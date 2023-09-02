@@ -3,7 +3,7 @@
     <div *ngIf="questions && questions.length > 0">
 
         <div class="align-item"  *ngFor="let question of questions; let questionsIndex = index">
-            <p class="ali-questions">{{ question.question }}</p>
+            <p class="ali-questions">{{ changeFormat(question.question) }}</p>
 
             <div class="ali-options">
                 <div class="ali-option" *ngFor="let option of question.options">
@@ -14,7 +14,7 @@
           correctAnswer(option, questionsIndex),
           error: wrongAnswer(option, questionsIndex),
           disabled:isQuizSubmitted }" id="clickOption">
-                        {{ option }}
+                        {{ changeFormat(option) }}
                     </button>
                 </div>
             </div>
